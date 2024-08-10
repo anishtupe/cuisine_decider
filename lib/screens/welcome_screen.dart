@@ -1,5 +1,6 @@
 import 'package:cuisine_decider/widgets/custom_scaffold.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class welcomescreen extends StatelessWidget {
   const welcomescreen({super.key});
@@ -11,26 +12,31 @@ class welcomescreen extends StatelessWidget {
         children: [
           Flexible(
             child: Container(
-              child: RichText(
-                textAlign: TextAlign.center,
-                text: const TextSpan(
-                  children: [
-                    TextSpan(
-                        text: 'Cuisine\n Decider\n',
+              padding: const EdgeInsets.symmetric(
+                vertical: 0,
+                horizontal: 40.0,
+              ),
+              child: Center(
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: const TextSpan(
+                    children: [
+                      TextSpan(
+                          text: 'Cuisine\n Decider\n',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 45.0,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      TextSpan(
+                        text: '',
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 45.0,
-                          fontWeight: FontWeight.bold,
-                        )),
-                    TextSpan(
-                      text:
-                          'Welcome back! Enter personal details to register \n',
-                      style: TextStyle(
-                        color: Colors.transparent,
-                        fontSize: 20,
+                          fontSize: 20,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
