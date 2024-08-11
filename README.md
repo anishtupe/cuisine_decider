@@ -5,5 +5,5 @@ A cuisine deciding application made using flutter
 <br></br>
 
 ## Made by-
-Prisha Kotekar 
+Prisha Kotekar\n
 Anish Tupe 
