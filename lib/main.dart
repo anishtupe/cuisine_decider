@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter auth',
+      title: 'cuisine decider',
       theme: ThemeData(),
       home: welcomescreen(),
     );
