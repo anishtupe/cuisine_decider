@@ -26,7 +26,7 @@ class _signinscreenState extends State<signinscreen> {
       child: Container(
         padding: const EdgeInsets.all(20.0),
         decoration: BoxDecoration(
-            color: Color.fromARGB(121, 0, 0, 0).withOpacity(0.3),
+            color: Color.fromARGB(255, 255, 255, 255).withOpacity(1),
             borderRadius: BorderRadius.circular(15.0),
             boxShadow: [
               BoxShadow(
@@ -42,7 +42,7 @@ class _signinscreenState extends State<signinscreen> {
               style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(116, 237, 161, 252),
+                  color: Color.fromARGB(255, 0, 0, 0),
                   shadows: [
                     Shadow(
                         offset: Offset(2.0, 2.0),
