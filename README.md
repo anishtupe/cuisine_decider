@@ -9,4 +9,4 @@ Prisha Kotekar and
 Anish Tupe 
 
 ## imp Note
-run "flutter pub get" in your terminal after cling the repo
+run "flutter pub get" in your terminal after you clone the repo
