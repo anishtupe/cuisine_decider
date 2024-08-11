@@ -12,12 +12,14 @@ Container firebasebutton(BuildContext context, String title, Function ontap) {
       child: Text(
         title,
         style: const TextStyle(
-            color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 16),
+            color: Color.fromARGB(255, 216, 137, 230),
+            fontWeight: FontWeight.bold,
+            fontSize: 16),
       ),
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.pressed)) {
-              return Colors.black26;
+              return Colors.black;
             }
 
             return Colors.white;
