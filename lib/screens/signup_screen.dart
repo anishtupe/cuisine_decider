@@ -67,7 +67,7 @@ class _signupscreenState extends State<signupscreen> {
             const SizedBox(
               height: 6,
             ),
-            firebasebutton(context, "Sign up", () {})
+            firebasebutton(context, "Create Account", () {})
           ],
         ),
       ),
