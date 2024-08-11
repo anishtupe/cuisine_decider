@@ -1,3 +1,4 @@
+import 'package:cuisine_decider/screens/forgetpassword_screen.dart';
 import 'package:cuisine_decider/widgets/custom_scaffold.dart';
 import 'package:cuisine_decider/widgets/reusablebutton.dart';
 import 'package:cuisine_decider/widgets/reusabletext.dart';
@@ -44,7 +45,7 @@ class _signinscreenState extends State<signinscreen> {
                   color: Color.fromARGB(116, 237, 161, 252),
                   shadows: [
                     Shadow(
-                        offset: Offset(2.0),
+                        offset: Offset(2.0, 2.0),
                         blurRadius: 3.0,
                         color: Color.fromARGB(108, 0, 0, 0))
                   ]),
@@ -60,12 +61,30 @@ class _signinscreenState extends State<signinscreen> {
             reuseabletextfield("Enter Password", Icons.lock_outlined, true,
                 _passwordTextController),
             const SizedBox(
-              height: 30,
+              height: 6,
             ),
+            forgetpassword(context),
             firebasebutton(context, "Sign In", () {})
           ],
         ),
       ),
     )));
+  }
+
+  Widget forgetpassword(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: 33,
+      alignment: Alignment.bottomRight,
+      child: TextButton(
+        child: Text(
+          "Forgot Password?",
+          style: TextStyle(color: Colors.black87),
+          textAlign: TextAlign.right,
+        ),
+        onPressed: () => Navigator.push(context,
+            MaterialPageRoute(builder: (context) => forgetpassword_screen())),
+      ),
+    );
   }
 }
