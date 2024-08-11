@@ -17,7 +17,7 @@ class welcomescreen extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(
                 vertical: 0,
-                horizontal: 40.0,
+                horizontal: 0,
               ),
               child: Center(
                 child: RichText(
@@ -38,21 +38,19 @@ class welcomescreen extends StatelessWidget {
                               )
                             ]),
                       ),
-                      TextSpan(
-                        text: '',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                        ),
-                      ),
                     ],
                   ),
                 ),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20.0),
+          Image.asset(
+            'assets/images/saly2.png',
+            height: 500,
+            width: 500,
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
