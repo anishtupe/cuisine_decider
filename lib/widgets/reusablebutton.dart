@@ -12,17 +12,17 @@ Container firebasebutton(BuildContext context, String title, Function ontap) {
       child: Text(
         title,
         style: const TextStyle(
-            color: Color.fromARGB(255, 216, 137, 230),
+            color: Color.fromARGB(255, 0, 0, 0),
             fontWeight: FontWeight.bold,
             fontSize: 16),
       ),
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.pressed)) {
-              return Colors.black;
+              return Colors.black.withOpacity(0.6);
             }
 
-            return Colors.white;
+            return Color.fromARGB(255, 255, 255, 255).withOpacity(0.8);
           }),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
