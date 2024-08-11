@@ -25,7 +25,7 @@ class _signinscreenState extends State<signinscreen> {
       child: Container(
         padding: const EdgeInsets.all(20.0),
         decoration: BoxDecoration(
-            color: Color.fromARGB(122, 222, 88, 255).withOpacity(0.3),
+            color: Color.fromARGB(121, 0, 0, 0).withOpacity(0.3),
             borderRadius: BorderRadius.circular(15.0),
             boxShadow: [
               BoxShadow(
@@ -36,6 +36,19 @@ class _signinscreenState extends State<signinscreen> {
             ]),
         child: Column(
           children: <Widget>[
+            const Text(
+              "Sign In",
+              style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(116, 237, 161, 252),
+                  shadows: [
+                    Shadow(
+                        offset: Offset(2.0),
+                        blurRadius: 3.0,
+                        color: Color.fromARGB(108, 0, 0, 0))
+                  ]),
+            ),
             const SizedBox(
               height: 15,
             ),
@@ -49,7 +62,7 @@ class _signinscreenState extends State<signinscreen> {
             const SizedBox(
               height: 30,
             ),
-            firebasebutton(context, "sign in", () {})
+            firebasebutton(context, "Sign In", () {})
           ],
         ),
       ),
