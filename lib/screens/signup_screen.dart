@@ -1,3 +1,4 @@
+import 'package:cuisine_decider/widgets/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 
 class signupscreen extends StatelessWidget {
@@ -5,6 +6,6 @@ class signupscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return customscaffold(child: Text('signup'));
   }
 }
