@@ -57,7 +57,7 @@ class welcomescreen extends StatelessWidget {
                 NavigationButton(
                     buttonText: 'Sign In', destinationPage: signinscreen()),
                 NavigationButton(
-                    buttonText: 'sign up', destinationPage: signupscreen())
+                    buttonText: 'Sign Up', destinationPage: signupscreen())
               ],
             ),
           )
