@@ -1,6 +1,6 @@
 # cuisine_decider
 
-A cuisine deciding application made using flutter 
+A Food Delivery application made using flutter and firebase  
 
 <br></br>
 
