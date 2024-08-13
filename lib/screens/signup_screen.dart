@@ -1,8 +1,10 @@
+import 'package:cuisine_decider/screens/home_screen.dart';
 import 'package:cuisine_decider/widgets/custom_scaffold.dart';
 import 'package:cuisine_decider/widgets/reusablebutton.dart';
 import 'package:cuisine_decider/widgets/reusabletext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class signupscreen extends StatefulWidget {
   const signupscreen({super.key});
@@ -67,7 +69,19 @@ class _signupscreenState extends State<signupscreen> {
             const SizedBox(
               height: 6,
             ),
-            firebasebutton(context, "Create Account", () {})
+            firebasebutton(context, "Create Account", () {
+              FirebaseAuth.instance
+                  .createUserWithEmailAndPassword(
+                      email: _emailTextController.text,
+                      password: _passwordTextController.text)
+                  .then((value) {
+                print("Created New account");
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => homescreen()));
+              }).onError((error, stackTrace) {
+                print("error ${error.toString()}");
+              });
+            }),
           ],
         ),
       ),

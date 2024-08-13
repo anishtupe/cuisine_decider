@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "504364116674",
+    "project_id": "cuisine-decider-73b3d",
+    "storage_bucket": "cuisine-decider-73b3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504364116674:android:ca395e19dc64c59bbce95b",
+        "android_client_info": {
+          "package_name": "com.example.cuisine_decider"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBUqXdckz7HCun-fGc6uvVP1GQIHXy2Mw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

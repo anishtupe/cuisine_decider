@@ -1,9 +1,12 @@
 import 'package:cuisine_decider/screens/forgetpassword_screen.dart';
+import 'package:cuisine_decider/screens/home_screen.dart';
 import 'package:cuisine_decider/widgets/custom_scaffold.dart';
 import 'package:cuisine_decider/widgets/reusablebutton.dart';
 import 'package:cuisine_decider/widgets/reusabletext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class signinscreen extends StatefulWidget {
   const signinscreen({super.key});
@@ -64,7 +67,18 @@ class _signinscreenState extends State<signinscreen> {
               height: 6,
             ),
             forgetpassword(context),
-            firebasebutton(context, "Sign In", () {})
+            firebasebutton(context, "Sign In", () {
+              FirebaseAuth.instance
+                  .signInWithEmailAndPassword(
+                      email: _emailTextController.text,
+                      password: _passwordTextController.text)
+                  .then((value) {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => homescreen()));
+              }).onError((error, stackTrace) {
+                print("error ${error.toString()}");
+              });
+            })
           ],
         ),
       ),

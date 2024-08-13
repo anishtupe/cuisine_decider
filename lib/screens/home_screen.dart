@@ -1,24 +1,30 @@
-import 'package:cuisine_decider/screens/welcome_screen.dart';
+import 'package:cuisine_decider/screens/signin_screen.dart';
 import 'package:cuisine_decider/widgets/custom_scaffold.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class _homescreen extends StatefulWidget {
-  const _homescreen({super.key});
+class homescreen extends StatefulWidget {
+  const homescreen({super.key});
 
   @override
-  State<_homescreen> createState() => __homescreenState();
+  State<homescreen> createState() => _homescreenState();
 }
 
-class __homescreenState extends State<_homescreen> {
+class _homescreenState extends State<homescreen> {
   @override
   Widget build(BuildContext context) {
     return customscaffold(
-      child: ElevatedButton(
-        child: Text("logout"),
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => welcomescreen()));
-        },
+      child: Center(
+        child: ElevatedButton(
+          child: Text("Signout"),
+          onPressed: () {
+            FirebaseAuth.instance.signOut().then((value) {
+              print("Signedout");
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => signinscreen()));
+            });
+          },
+        ),
       ),
     );
   }
