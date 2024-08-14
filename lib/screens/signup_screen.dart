@@ -2,6 +2,7 @@ import 'package:cuisine_decider/screens/home_screen.dart';
 import 'package:cuisine_decider/widgets/custom_scaffold.dart';
 import 'package:cuisine_decider/widgets/reusablebutton.dart';
 import 'package:cuisine_decider/widgets/reusabletext.dart';
+import 'package:cuisine_decider/widgets/showerror.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -80,6 +81,7 @@ class _signupscreenState extends State<signupscreen> {
                     MaterialPageRoute(builder: (context) => homescreen()));
               }).onError((error, stackTrace) {
                 print("error ${error.toString()}");
+                showError(context, "error ${error.toString()}");
               });
             }),
           ],
