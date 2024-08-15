@@ -76,9 +76,9 @@ class _signinscreenState extends State<signinscreen> {
                   .then((value) {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => homescreen()));
-              }).onError((error, stackTrace) {
+              }).onError((error, StackTrace) {
                 print("error ${error.toString()}");
-                showError(context, "error ${error}");
+                showError(context, "error ${error.toString()}");
               });
             })
           ],
@@ -93,7 +93,7 @@ class _signinscreenState extends State<signinscreen> {
       height: 33,
       alignment: Alignment.bottomRight,
       child: TextButton(
-        child: Text(
+        child: const Text(
           "Forgot Password?",
           style: TextStyle(color: Colors.black87),
           textAlign: TextAlign.right,
