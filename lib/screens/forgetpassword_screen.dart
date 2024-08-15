@@ -16,30 +16,28 @@ class _forgetpassword_screenState extends State<forgetpassword_screen> {
   @override
   Widget build(BuildContext context) {
     return customscaffold(
-      child: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.fromLTRB(20, 12, 20, 0),
-          decoration: BoxDecoration(
-            color: Color.fromARGB(255, 255, 255, 255),
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: Column(
-            children: <Widget>[
-              const SizedBox(
-                height: 20,
-              ),
-              reuseabletextfield("Enter Email Id", Icons.person_outlined, false,
-                  _emailTextController),
-              const SizedBox(
-                height: 20,
-              ),
-              firebasebutton(context, "Reset Password", () {
-                FirebaseAuth.instance
-                    .sendPasswordResetEmail(email: _emailTextController.text)
-                    .then((value) => Navigator.of(context).pop());
-              })
-            ],
-          ),
+      child: Container(
+        padding: EdgeInsets.all(20.0),
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 255, 255, 255),
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Column(
+          children: <Widget>[
+            const SizedBox(
+              height: 20,
+            ),
+            reuseabletextfield("Enter Email Id", Icons.person_outlined, false,
+                _emailTextController),
+            const SizedBox(
+              height: 20,
+            ),
+            firebasebutton(context, "Reset Password", () {
+              FirebaseAuth.instance
+                  .sendPasswordResetEmail(email: _emailTextController.text)
+                  .then((value) => Navigator.of(context).pop());
+            })
+          ],
         ),
       ),
     );
