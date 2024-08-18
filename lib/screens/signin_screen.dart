@@ -1,5 +1,6 @@
 import 'package:cuisine_decider/screens/forgetpassword_screen.dart';
 import 'package:cuisine_decider/screens/home_screen.dart';
+import 'package:cuisine_decider/screens/signup_screen.dart';
 import 'package:cuisine_decider/widgets/custom_scaffold.dart';
 import 'package:cuisine_decider/widgets/reusablebutton.dart';
 import 'package:cuisine_decider/widgets/reusabletext.dart';
@@ -80,11 +81,32 @@ class _signinscreenState extends State<signinscreen> {
                 print("error ${error.toString()}");
                 showError(context, "error ${error.toString()}");
               });
-            })
+            }),
+            signupoption()
           ],
         ),
       ),
     )));
+  }
+
+  Row signupoption() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text("Don't Have a account ",
+            style: TextStyle(color: Colors.black87)),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context as BuildContext,
+                MaterialPageRoute(builder: (context) => signupscreen()));
+          },
+          child: const Text(
+            "Sign Up",
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          ),
+        )
+      ],
+    );
   }
 
   Widget forgetpassword(BuildContext context) {

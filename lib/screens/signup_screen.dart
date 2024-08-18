@@ -1,4 +1,5 @@
 import 'package:cuisine_decider/screens/home_screen.dart';
+import 'package:cuisine_decider/screens/signin_screen.dart';
 import 'package:cuisine_decider/widgets/custom_scaffold.dart';
 import 'package:cuisine_decider/widgets/reusablebutton.dart';
 import 'package:cuisine_decider/widgets/reusabletext.dart';
@@ -84,9 +85,30 @@ class _signupscreenState extends State<signupscreen> {
                 showError(context, "error ${error.toString()}");
               });
             }),
+            Signinoption()
           ],
         ),
       ),
     )));
+  }
+
+  Row Signinoption() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text("Already Have a Account? ",
+            style: TextStyle(color: Colors.black87)),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context as BuildContext,
+                MaterialPageRoute(builder: (context) => signinscreen()));
+          },
+          child: const Text(
+            "Sign In",
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          ),
+        )
+      ],
+    );
   }
 }
