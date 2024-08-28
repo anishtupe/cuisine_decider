@@ -30,7 +30,7 @@ class _signupscreenState extends State<signupscreen> {
         padding: const EdgeInsets.all(20.0),
         decoration: BoxDecoration(
             color: Color.fromARGB(255, 255, 255, 255).withOpacity(1),
-            borderRadius: BorderRadius.circular(15.0),
+            borderRadius: BorderRadius.circular(30.0),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.2),
